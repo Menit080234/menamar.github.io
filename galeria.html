@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+ 
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f3f3f3;
+    }
+
+    header {
+      background-color: #222;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #555;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav button {
+      margin: 5px;
+      padding: 10px 20px;
+      background-color: #ef233c;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    nav button:hover {
+      background-color: #d90429;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .gallery img {
+      width: 200px;
+      height: 150px;
+      margin: 10px;
+      object-fit: cover;
+      -webkit-mask-image: radial-gradient(circle at center, black 70%, transparent 100%);
+      mask-image: radial-gradient(circle at center, black 70%, transparent 100%);
+    }
+
+    table {
+      width: 80%;
+      margin: 20px auto;
+      border-collapse: collapse;
+      background-color: rgb(189, 235, 238);
+    }
+
+    th, td {
+      border: 1px solid #444;
+      padding: 10px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #222;
+      color: rgb(223, 217, 252);
+    }
+
+    iframe {
+      width: 80%;
+      height: 300px;
+      border: 2px solid #444;
+      margin: 20px auto;
+      display: block;
+    }
+
+    footer {
+      background-color: #222;
+      color: rgb(255, 205, 247);
+      text-align: center;
+      padding: 10px;
+    }
+
+  </style>
+  <script>
+    function cambiarImagen() {
+      const imagen = document.getElementById("imagen-dinamica");
+      imagen.src = imagen.src.includes("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRU3gW0Wjb2HY9KBCj_Jy6Luv2-WBVsmiJeDA&s") 
+      ? "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf6kuRLxxff_HgmU25UsB1h6Jif73kl3rdMg&s" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRU3gW0Wjb2HY9KBCj_Jy6Luv2-WBVsmiJeDA&s";
+    }
+
+    function mostrarInfo() {
+      alert("El litio es fundamental para la transición energética, usado en baterías recargables.");
+    }
+  </script>
+</head>
+<body>
+
+<nav>
+  <button onclick="cambiarImagen()">Cambiar Imagen</button>
+  <button onclick="mostrarInfo()">Mostrar Información</button>
+</nav>
+
+<!-- Iframe como "marco" -->
+<iframe src="https://es.wikipedia.org/wiki/Litio" title="Información sobre el Litio"></iframe>
+
+<!-- Galería con máscaras -->
+<section class="container gallery">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRU3gW0Wjb2HY9KBCj_Jy6Luv2-WBVsmiJeDA&s" alt="Litio en estado natural">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf6kuRLxxff_HgmU25UsB1h6Jif73kl3rdMg&s" alt="Extraccion de litio">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdm3zobIEmBwTiMdgNjCpOhwj0fyH6NAlyTw&s" alt="Baterías de litio">
+    <img id="imagen-dinamica" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRU3gW0Wjb2HY9KBCj_Jy6Luv2-WBVsmiJeDA&s" >
+  </section>
+
+
+<section>
+  <table>
+    <caption><strong>Producción Mundial de Litio</strong></caption>
+    <tr>
+      <th>País</th>
+      <th>Reservas</th>
+      <th>Producción</th>
+    </tr>
+    <tr>
+      <td>Bolivia</td>
+      <td>21 millones de toneladas</td>
+      <td>20,000 toneladas</td>
+    </tr>
+    <tr>
+      <td>Argentina</td>
+      <td>20 millones</td>
+      <td>34,000</td>
+    </tr>
+    <tr>
+      <td>Chile</td>
+      <td>11 millones</td>
+      <td>26,000</td>
+    </tr>
+  </table>
+</section>
+
+
+
+</body>
+</html>
+
+
+
+
+  
+
+ 

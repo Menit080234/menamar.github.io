@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Los Loros Locos</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; background: #f0f4c3; }
+    nav {
+      background-color: #33691e;
+      padding: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    nav a {
+      color: white;
+      margin: 5px 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    iframe {
+      width: 100%;
+      height: calc(100vh - 60px);
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="bienvenida.html" target="frame">Bienvenida</a>
+    <a href="listas.html" target="frame">oro!</a>
+    <a href="hipervinculos.html" target="frame">Hipervínculos</a>
+    <a href="tablas.html" target="frame">Tablas</a>
+    <a href="galeria.html" target="frame">Galería</a>
+    <a href="anclaje.html" target="frame">mas sobre el litio</a>
+    <a href="conclusion.html" target="frame">Conclusión</a>
+  </nav>
+
+  <iframe name="frame" src="bienvenida.html"></iframe>
+</body>
+</html>
