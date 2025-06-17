@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario Oro de Locos Litio</title>
+</head>
+<body>
+  <h2>Formulario: Oro de Locos Litio</h2>
+
+  <form id="formulario" onsubmit="procesarFormulario(event)">
+    <label>Nombre:<br>
+      <input type="text" name="nombre" required>
+    </label><br><br>
+
+    <label>Correo electrónico:<br>
+      <input type="email" name="email" required>
+    </label><br><br>
+
+    <label>Opinión:<br>
+      <textarea name="opinion" rows="4" cols="40" required></textarea>
+    </label><br><br>
+
+    <label>¿Te interesa participar?<br>
+      <select id="interes" name="interes" required>
+        <option value="">-- Elige una opción --</option>
+        <option value="si">Sí</option>
+        <option value="no">No</option>
+        <option value="mas_info">Quiero más información</option>
+      </select>
+    </label><br><br>
+
+    <input type="submit" value="Enviar">
+  </form>
+
+  <script>
+    function procesarFormulario(event) {
+      event.preventDefault();
+
+      const interes = document.getElementById('interes').value;
+
+      if (interes === 'no') {
+        alert('Gracias por tu tiempo. ¡Hasta pronto!');
+    }   else if (interes === 'mas_info') {
+        window.location.href = 'https://www.europapress.es/ciencia/laboratorio/noticia-oro-locos-tambien-puede-contener-litio-20240415171404.html'; // Redirección real
+      } else {
+        alert('Por favor selecciona una opción válida.');
+      }
+    }
+
+  </script>
+</body>
+</html>
